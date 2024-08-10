@@ -1,3 +1,22 @@
+
+"""
+Author : Lukas Johnny
+File : main_controller.py
+
+Description : + This is hand gesture controller using machine learning model from mediapipe to control the game
+              + Key mapping as follow
+              online_game 
+                - z jump
+                - left arrow
+                - right arrow
+
+              main_controller.PY
+                - k jump
+                - h left
+                - i right
+                
+Date : 11-8-2024          
+"""
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -120,6 +139,9 @@ class NoseHandTracking():
                 
             else:
                 self.command = "down"
+                
+        else:
+            self.command = "down"
 
         self.executeCommand()
 
